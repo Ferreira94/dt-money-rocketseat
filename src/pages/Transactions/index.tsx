@@ -8,6 +8,7 @@ import {
   TransactionsContainer,
   TransactionsTable,
 } from "./style";
+import { dateFormatter, priceFormatter } from "../../utils/formatter";
 
 interface ITransactionsProps {
   id: number;
@@ -37,11 +38,12 @@ export function Transactions() {
                   <td width="50%">{item.description}</td>
                   <td>
                     <PriceHighlight variant={item.type}>
-                      {item.price}
+                      {item.type === "outcome" && "- "}
+                      {priceFormatter.format(item.price)}
                     </PriceHighlight>
                   </td>
                   <td>{item.category}</td>
-                  <td>{item.createdAt}</td>
+                  <td>{dateFormatter.format(new Date(item.createdAt))}</td>
                 </tr>
               );
             })}
