@@ -23,6 +23,22 @@
       "category": "Compras online",
       "price": 120,
       "createdAt": "2022-08-09T13:10:50.624Z"
+    },
+    {
+      "description": "Salário",
+      "price": 2000,
+      "category": "assasa",
+      "type": "income",
+      "createdAt": "2022-08-09T17:19:20.190Z",
+      "id": 4
+    },
+    {
+      "description": "Naruto Rasengan",
+      "price": 28950,
+      "category": "assasa",
+      "type": "income",
+      "createdAt": "2022-08-09T17:29:51.472Z",
+      "id": 5
     }
   ]
 }

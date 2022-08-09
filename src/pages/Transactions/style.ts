@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 interface IPriceHighlightProps {
-  variant: "income" | "outcome";
+  variant: 'income' | 'outcome';
 }
 
 export const TransactionsContainer = styled.main`
@@ -19,7 +19,7 @@ export const TransactionsTable = styled.table`
 
   td {
     padding: 1.25rem 2rem;
-    background-color: ${(props) => props.theme["gray-700"]};
+    background-color: ${(props) => props.theme['gray-700']};
 
     &:first-child {
       border-top-left-radius: 6px;
@@ -35,7 +35,5 @@ export const TransactionsTable = styled.table`
 
 export const PriceHighlight = styled.span<IPriceHighlightProps>`
   color: ${(props) =>
-    props.variant === "income"
-      ? props.theme["green-300"]
-      : props.theme["red-300"]};
+    props.variant === 'income' ? props.theme['green-300'] : props.theme['red-300']};
 `;

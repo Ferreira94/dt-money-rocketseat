@@ -1,23 +1,10 @@
-import { useContext, useEffect, useState } from "react";
-import { Header } from "../../components/Header";
-import { Summary } from "../../components/Summary";
-import { SearchForm } from "./components/SearchForm/index";
-import { TransactionsContext } from "../../contexts/TransactionsContext";
-import {
-  PriceHighlight,
-  TransactionsContainer,
-  TransactionsTable,
-} from "./style";
-import { dateFormatter, priceFormatter } from "../../utils/formatter";
-
-interface ITransactionsProps {
-  id: number;
-  description: string;
-  type: "income" | "outcome";
-  price: number;
-  category: string;
-  createdAt: string;
-}
+import { useContext } from 'react';
+import { Header } from '../../components/Header';
+import { Summary } from '../../components/Summary';
+import { SearchForm } from './components/SearchForm/index';
+import { TransactionsContext } from '../../contexts/TransactionsContext';
+import { PriceHighlight, TransactionsContainer, TransactionsTable } from './style';
+import { dateFormatter, priceFormatter } from '../../utils/formatter';
 
 export function Transactions() {
   const { transactions } = useContext(TransactionsContext);
@@ -38,7 +25,7 @@ export function Transactions() {
                   <td width="50%">{item.description}</td>
                   <td>
                     <PriceHighlight variant={item.type}>
-                      {item.type === "outcome" && "- "}
+                      {item.type === 'outcome' && '- '}
                       {priceFormatter.format(item.price)}
                     </PriceHighlight>
                   </td>
