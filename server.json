@@ -39,6 +39,22 @@
       "type": "income",
       "createdAt": "2022-08-09T17:29:51.472Z",
       "id": 5
+    },
+    {
+      "description": "Foto do Naruto",
+      "price": 1000,
+      "category": "assasa",
+      "type": "outcome",
+      "createdAt": "2022-08-09T19:07:08.662Z",
+      "id": 6
+    },
+    {
+      "description": "Naruto e Sakura",
+      "price": 19800,
+      "category": "assasa",
+      "type": "outcome",
+      "createdAt": "2022-08-09T19:38:48.930Z",
+      "id": 7
     }
   ]
 }
